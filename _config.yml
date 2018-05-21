@@ -1,6 +1,6 @@
 # Site settings
-title: Your Blog
-SEOTitle: 你的博客 | Your Blog
+title: Coding Bro's Blog
+SEOTitle: 代码笔记哥的博客 | Coding Bro's Blog
 header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: ""
@@ -12,12 +12,11 @@ baseurl: ""         # original: /huxblog-boilerplate, for example, '/blog' if yo
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
+facebook_username:  huxpro
 github_username:    huxpro
 #twitter_username:  huxpro
-facebook_username:  huxpro
-
+weibo_username:     huxpro
+zhihu_username:     huxpro
 
 
 # Build settings
@@ -59,10 +58,10 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 
 
