@@ -12,11 +12,12 @@ baseurl: ""         # original: /huxblog-boilerplate, for example, '/blog' if yo
 
 # SNS settings
 RSS: false
-facebook_username:  huxpro
-github_username:    huxpro
-#twitter_username:  huxpro
-weibo_username:     huxpro
-zhihu_username:     huxpro
+facebook_username:  starwavelin
+github_username:    starwavelin
+linkedin_username:  ben-x-lin-42712b28/
+#twitter_username:
+weibo_username:     6469155519
+zhihu_username:     xing-huo-lang
 
 
 # Build settings
@@ -49,9 +50,9 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: huxblog
+# duoshuo_username:
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
 
