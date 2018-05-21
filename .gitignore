@@ -7,7 +7,7 @@ node_modules
 *.sh
 
 # sample markdown files
-**/2015-*.markdown
+# **/2015-*.markdown
 
 # from default jekyll template
 .sass-cache
