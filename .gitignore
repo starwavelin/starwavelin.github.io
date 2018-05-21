@@ -1,3 +1,14 @@
+# from huxblog-boilerplate
 _site
+node_modules
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*.sh
+
+# sample markdown files
+**/2015-*.markdown
+
+# from default jekyll template
 .sass-cache
 .jekyll-metadata
