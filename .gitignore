@@ -7,7 +7,11 @@ node_modules
 *.sh
 
 # sample markdown files
-# **/2015-*.md
+**/2015-*.md
+img/post-banner/post-bg-2015.jpg
+img/post-banner/post-bg-js-module.jpg
+img/post-banner/post-bg-js-version.jpg
+img/post-banner/post-bg-unix-linux.jpg
 
 # from default jekyll template
 .sass-cache
