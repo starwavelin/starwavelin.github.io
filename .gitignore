@@ -5,6 +5,7 @@ node_modules
 */.DS_Store
 */*/.DS_Store
 *.sh
+gfm-toc
 
 # from default jekyll template
 .sass-cache
