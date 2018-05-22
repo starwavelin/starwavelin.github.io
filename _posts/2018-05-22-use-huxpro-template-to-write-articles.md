@@ -8,6 +8,7 @@ header-img: "img/post-banner/post-bg-mosaic.jpg"
 tags:
     - 其他技术
 ---
+### Table of Contents
     1. [Preface](#preface)
     2. [Writing a journal](#writing-a-journal)
     3. [Adding a table of contents](#adding-a-table-of-contents)
