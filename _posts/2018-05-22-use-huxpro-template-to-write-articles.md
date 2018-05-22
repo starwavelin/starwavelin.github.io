@@ -9,10 +9,10 @@ tags:
     - 其他技术
 ---
 ### Table of Contents
-    1. [Preface](#preface)
-    2. [Writing a journal](#writing-a-journal)
-    3. [Adding a table of contents](#adding-a-table-of-contents)
-    4. [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)   
+    - [Preface](#preface)
+    - [Writing a journal](#writing-a-journal)
+    - [Adding a table of contents](#adding-a-table-of-contents)
+    - [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)   
 
 ### Preface
 Firstly I would like to sincerely thank Mr. Xuan Huang (黄玄 | [Huxpro](https://github.com/Huxpro)) for providing this convenient Jekyll template.
