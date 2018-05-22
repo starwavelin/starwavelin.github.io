@@ -51,3 +51,17 @@ Once I removed the redundant indentations to make the code as below
 The problem resolved.
 
 ### Apply your own domain to your tech blog
+This step is optional and is not related to how to write an article. But isn't that cool if you can set your own domain pointing to your own YOUR_USERNAME.github.io formatted tech blog?
+
+Step 1: Purchase your domain (ie. I purchased starwavelin.com from [godaddy](https://www.godaddy.com/))  
+
+Step 2: On your godaddy account's DNS Management page, create ``A`` records that point your custom domain to the following IP addresses:
+
+> 185.199.108.153  
+> 185.199.109.153  
+> 185.199.110.153  
+> 185.199.111.153  
+
+Step 3: In your GITHUB_USERNAME.github.io/ project directory, add a file named "CNAME", and inside CNAME, just put one line -- your domain name (ie. for me I put "starwavelin.com")
+
+Step 4: You can then update the url value of **_config.yml** from ```url: "https://GITHUB_USERNAME.github.io"``` into ```url: "https://YOUR_DOMAINNAME"```
