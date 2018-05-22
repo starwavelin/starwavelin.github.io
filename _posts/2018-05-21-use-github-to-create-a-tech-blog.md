@@ -13,7 +13,7 @@ tags:
 Complete the 5 steps listed on [https://pages.github.com/](https://pages.github.com/)
 
 ### Use Jekyll to Build a Blog
-In your Max/Unix terminal
+In your Mac/Linux terminal
 ```
 # Install Jekyll and Bundler gems through RubyGems
 $ sudo gem install jekyll bundler

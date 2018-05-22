@@ -6,12 +6,6 @@ node_modules
 */*/.DS_Store
 *.sh
 
-# sample markdown files
-**/2015-*.md
-img/post-banner/post-bg-2015.jpg
-img/post-banner/post-bg-js-module.jpg
-img/post-banner/post-bg-js-version.jpg
-
 # from default jekyll template
 .sass-cache
 .jekyll-metadata
