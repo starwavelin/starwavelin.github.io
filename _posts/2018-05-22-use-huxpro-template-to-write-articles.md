@@ -9,10 +9,10 @@ tags:
     - 其他技术
 ---
 ### Table of Contents
-    - [Preface](#preface)
-    - [Writing a journal](#writing-a-journal)
-    - [Adding a table of contents](#adding-a-table-of-contents)
-    - [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)   
+- [Preface](#preface)
+- [Writing a journal](#writing-a-journal)
+- [Adding a table of contents](#adding-a-table-of-contents)
+- [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)   
 
 ### Preface
 Firstly I would like to sincerely thank Mr. Xuan Huang (黄玄 | [Huxpro](https://github.com/Huxpro)) for providing this convenient Jekyll template.
@@ -40,8 +40,14 @@ And, Huxpro template also provides an automatically generated summary of an arti
 You can also add a table of content to your journal if you think necessary. To do so, you need a tool called [gfm-toc](https://github.com/starwavelin/AlgorithmPractice/blob/master/gfm-toc)  
 And I already wrote an instruction on [how to use gfm-toc](https://github.com/starwavelin/AlgorithmPractice/blob/master/gfm-toc-usage.md)
 
-Hmm, seems like directly apply the gfm-toc tool above did not give what I want.
 ![toc-issue](/img/in-post/180522-use-huxpro-template/toc-issue.png)
-No worries. I worked around to get it work. And, I will look into this in the future.
+<small class="img-hint">Hmm, seems like directly apply the gfm-toc tool above did not give what I want</small>
+No worries. I worked around to get it work. The error was actually because I set all the headers of each section in this journal to be h3 (header size 3, in markdown which is 3 hashes). Therefore, gfm-toc tool auto made 2 indentations to represent h3 header, like below.
+![error](/img/in-post/180522-use-huxpro-template/error.png)
+
+Once I removed the redundant indentations to make the code as below
+![fix](/img/in-post/180522-use-huxpro-template/fix.png)
+
+The problem resolved.
 
 ### Apply your own domain to your tech blog
