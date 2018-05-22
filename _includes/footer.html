@@ -59,6 +59,17 @@
                     </li>
                     {% endif %}
 
+                    {% if site.wechat_username %}
+                    <li>
+                        <a target="_blank" href="http://vlambda.com/account_{{ site.wechat_username }}.html">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
                     {% if site.youtube_username %}
                     <li>
                         <a href="https://www.youtube.com/user/{{ site.youtube_username }}">
@@ -93,7 +104,7 @@
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; <a href="http://vlambda.com/account_Coding-Notes.html" target="_bro">{{ site.title }}</a> {{ site.time | date: '%Y' }}
+                    Copyright &copy; <a href="http://www.starwavelin.com" target="_bro">{{ site.title }}</a> {{ site.time | date: '%Y' }}
                     <br>
                     Theme by <a href="https://huangxuan.me/" target="_blank">Huxpro</a> |
                     <iframe
