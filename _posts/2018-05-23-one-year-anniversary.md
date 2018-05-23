@@ -9,6 +9,15 @@ tags:
     - 演说
     - 翻译
 ---
+>
+今天是我和我太太结婚🎎一周年纪念日。手动翻译了下一年前青岛婚宴上的演说词。  
+Today marks the one year anniversary of our marriage. I translated the wedding speech I gave in the banquet in Qingdao, to remind myself :)  
+
+>
+并且搭建好了这个网站，送给我夫人。  
+Also built this website as a gift to my wife.
+
+
 ##### 语言选择 | Language Selection
 - [英文 English](#英文-english)
 - [中文 Chinese](#中文-chinese)
