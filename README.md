@@ -5,8 +5,9 @@
 - [Acknowledgement](#acknowledgement)
 
 ### Features Added
-1. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
-2. [] @TODO Allow blog viewers to toggle between the available languages of an article
+1. [] @TODO Add advertisement feature to my website
+2. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
+3. [] @TODO Allow blog viewers to toggle between the available languages of an article
 
 
 ### Bugs and Fixes
