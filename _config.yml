@@ -84,10 +84,11 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Miao Designer",
-        href: "http://shellmiao-design.com/"
-    },{
         title: "Tree",
         href: "https://yueyingcui.wordpress.com/"
+    },
+    {
+        title: "Miao Designer",
+        href: "http://shellmiao-design.com/"
     }
 ]
