@@ -11,7 +11,7 @@
 
 
 ### Bugs and Fixes
-- 2018-05-23 [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/)
+- 2018-05-23 [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/#2018-05-23)
   - [x] Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS
   - [x] Some user tested and experienced it took 5 sec for this site to load; I tested in Chrome Guest mode seeing 3.29 sec to load. Could I improve the load speed?
 - 2018-05-21  
