@@ -12,8 +12,8 @@
 
 ### Bugs and Fixes
 - 2018-05-23
-  - [] Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS
-  - [] Some user tested and experienced it took 5 sec for this site to load; I tested in Chrome Guest mode seeing 3.29 sec to load. Could I improve the load speed?
+  - [x] Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS
+  - [x] Some user tested and experienced it took 5 sec for this site to load; I tested in Chrome Guest mode seeing 3.29 sec to load. Could I improve the load speed? [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/)
 - 2018-05-21  
   - [x] Updated the ```baseurl:``` in ```_config.yml``` file from "/huxblog-boilerplate" to "" and served my blog from the root directory of ```GITHUB_USERNAME.github.io```
   - [x] Fixed the issue of [cannot display SNS Zhihu and GitHub icons](https://github.com/Huxpro/huxblog-boilerplate/issues/17) based on [pull request #21](https://github.com/Huxpro/huxblog-boilerplate/pull/21/commits/207a48449f06b3a509c861a4622d92e48855c698)
