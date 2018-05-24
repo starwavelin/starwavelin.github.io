@@ -23,6 +23,14 @@ these two are for browsers lower than IE9, already in commented mode
 5. **anchor-js v.1.1.1**  
 https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js  
 
-The only one I found different from others is the one for font-awesome 4.2.0, which is supplied from ```https://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css```. The original author left a comment saying *Hux change font-awesome CDN to qiniu*. So this CDN is actually from 七牛云 for the convenience of viewers from mainland China.
+The only one I found different from others is the one for font-awesome 4.2.0, which is supplied from ```https://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css```. The original author left a comment saying *Hux change font-awesome CDN to qiniu*. So this CDN is actually from 七牛云 for the convenience of viewers in mainland China.
 
 Now let me just change this back to ```http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css``` and see if the page loading speed would improve.  
+
+And Yes, the loading speed has been dramatically improved to 1.35 second.
+![loading-speed](/img/in-post/180524-bug-fixes/180524_loadspeed.png)
+
+*Note:*  
+For people from mainland China, if you have difficulty viewing the SNS icons as below,
+![sns-icons](/img/in-post/180524-bug-fixes/SNS_icons.png)
+please use Disqus (if available to you) or any other SNS/contact method to let me know. I will do my best to balance the services to my audiences. Thanks!
