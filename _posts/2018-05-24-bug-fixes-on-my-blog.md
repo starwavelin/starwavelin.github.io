@@ -10,6 +10,14 @@ tags:
     - Extensible Note
 ---
 
+### 2018-05-28
+**Configure Disqus on my blog**  
+Besides adding my disqus shortname to ```_config.yml```, I also need to follow hints [here](https://github.com/Huxpro/huxpro.github.io/issues/157)  
+Basically, it means on [this page](https://disqus.com/profile/signup/intent/),
+I need to select the option "I want to install Disqus on my site"
+
+
+
 ### 2018-05-23
 **CDN**  
 What libraries are using CDN for now?
