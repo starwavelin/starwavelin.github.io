@@ -33,4 +33,17 @@ Amorphic 是一个用于Node.js网站开发的全栈同型(isomorphic)框架。
 
 ### 模型、视图、控制器
 
+![mvc-amorphic](https://github.com/selsamman/amorphic-docs/blob/gh-pages/img/mvc.png?raw=true)
+
+Amorphic 是基于MVC模式设计的
+* 模型(Model) - 用于表达你的数据和数据库中的模型的对象
+* 视图(View) - 以数据绑定或Directive的形式将HTML映射到你的模型中的属性或者是控制器
+* 控制器(Controller) - 起到你的session的作用。同时也提供数据绑定到视图的根域(root scope)。你可以构造更具粒度性(granular)的控制器来实现模块化。
+
+以下 Amorphic 的部件是对这种MVC结构的支持：
+* 超级类(Supertype) - 这是一个可以支持丰富定义对象、对象属性、对象间的关系且具有传统的继承关系(inheritance)支持的类系统。正是因为Amorphic对你的数据有具体的了解，它才能够实现浏览器端与服务器端的同步化来持久化你的数据。
+* Semotus - 这是浏览器端与服务器端传输与同步化的机制。
+* 绑定器(Bindster) - 这是数据绑定和包含了路由功能的模板系统。
+* 持久器(Persistor) - 这是能让你的数据持久化且管理数据的读取的对象关系映射或者非关系型映射(如 MongoDB)工具。
+
 **版权声明：以上内容为代码笔记哥（Coding Bro）翻译。转载请添加这句话以及原文链接starwavelin.com/2018/05/28/about-amorphic/**
