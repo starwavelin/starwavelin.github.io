@@ -5,14 +5,13 @@
 - [Acknowledgement](#acknowledgement)
 
 ### Features Added
-1. [] @TODO Add advertisement feature to my website
-2. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
-3. [] @TODO Allow blog viewers to toggle between the available languages of an article
+1. [] @TODO Enable Disqus Commenting
+2. [] @TODO Add advertisement feature to my website
+3. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
+4. [] @TODO Allow blog viewers to toggle between the available languages of an article
 
 
 ### Bugs and Fixes
-- 2018-05-24
-  - [] Disqus commenting unavailable
 - 2018-05-23 [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/#2018-05-23)
   - [x] Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS
   - [x] Some user tested and experienced it took 5 sec for this site to load; I tested in Chrome Guest mode seeing 3.29 sec to load. Could I improve the load speed?
