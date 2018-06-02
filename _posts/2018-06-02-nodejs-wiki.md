@@ -8,7 +8,6 @@ header-img: "img/post-banner/post-bg-nodejs.jpg"
 tags:
     - Node
     - 翻译
-    - Extensible Note
 ---
 Node.js是我在下一阶段工作中要大量用到的JavaScript语言的服务器端运行环境。和上一篇博文一样，本翻译的主要目的是让自己对这个运行环境有一个概览，并不刻意添加Node.js在中文使用地区（中国大陆、香港、台湾、新马等地）的情况。
 本翻译参考版本为2018年6月2日读取的
@@ -38,10 +37,33 @@ Node.js的分布式的开发项目是由Node.js基金会来运作的。这个基
 - [项目管理](#项目管理)
 
 ### 历史
+2009年 Ryan Dahl 发明了Node.js。其发明的背景如下：
+
+当2009年Node.js被发明出来时，距离上一个（也是第一个）服务器端的JavaScript运行环境被开发出来已经过去13年了。世界上第一个服务器端的JS运行环境是1996年网景公司开发的LiveWire Pro Web。回到Node.js这个话题。Dahl开发Node的灵感源于一次在Flickr上观看文件上传的进度条。由于浏览器无法得知文件的多大比例已经上传完成，所以为准确显示进度条进展过程，浏览器要不断的给后端服务器发请求。Dahl觉得这个方法太low了，应该要有更好的方法。此外，Dahl也批评当时很流行的阿帕奇HTTP服务器的局限性。阿帕奇服务器至多处理10000+的并发连接请求，超标了就会有雪崩效应。这是因为阿帕奇服务器对每进来一个请求就开一个线程，线程之间是阻塞的（一个线程在占用IO资源时，其他线程要等待）。
+
+*维基百科没有写 Dahl 如何努力地开发出了Node.js。话锋一转，便是*
+
+2009年11月8日，Dahl将他的Node.js项目在欧洲JavaScript大会上进行了展示。Node.js是结合了谷歌的V8 JavaScript引擎、一个事件循环队列以及一个低级别的IO API。
+
+2010年1月：Node.js引进了包管理系统```npm```
+
+2011年6月：微软和Joyent实现了原生Windows版Node.js
+
+2012年1月：Dahl退居二线，让他的同事也是npm的发明者Isaac Schlueter管理Node项目。
+
+2014年1月：Isaac Schlueter宣布由Timothy J. Fontaine接管Node项目。
+
+中途杀出个程咬金，叫io.js, io.js是fork node.js项目得到的。
+
+2015年9月，Node.js v0.12版本与 io.js v3.3版本合并为Node v4.0版本。这次合并使得V8引擎JavaScript ES6的功能被添加入Node.js，并进入了Node长期支持版的开端。
+
+至2016年，io.js的官方网站推荐开发者选用Node.js并告诉开发者以后将不再有新的io.js发布--因为已经跟Node.js合并了嘛。
+
 ### 概览
 #### 平台架构
 #### 业界支持
 ### 发布
+原文 [https://en.wikipedia.org/wiki/Node.js#Releases](https://en.wikipedia.org/wiki/Node.js#Releases) 中有个图表总结了Node的每一期发布。笔者就不赘述翻译了。笔者查了下，自己机器上的Node版本为v8.9.4，属于Carbon系列。查Node版本的命令```$ node --version```
 ### 技术细节
 #### 线程
 #### V8
