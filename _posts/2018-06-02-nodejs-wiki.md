@@ -8,6 +8,7 @@ header-img: "img/post-banner/post-bg-nodejs.jpg"
 tags:
     - Node
     - 翻译
+    - Extensible Note
 ---
 Node.js是我在下一阶段工作中要大量用到的JavaScript语言的服务器端运行环境。和上一篇博文一样，本翻译的主要目的是让自己对这个运行环境有一个概览，并不刻意添加Node.js在中文使用地区（中国大陆、香港、台湾、新马等地）的情况。
 本翻译参考版本为2018年6月2日读取的
@@ -60,16 +61,33 @@ Node.js的分布式的开发项目是由Node.js基金会来运作的。这个基
 至2016年，io.js的官方网站推荐开发者选用Node.js并告诉开发者以后将不再有新的io.js发布--因为已经跟Node.js合并了嘛。
 
 ### 概览
+
+_今天先翻译到这里 2018/6/2 4:09pm_
+
+Node.js allows the creation of Web servers and networking tools using JavaScript and a collection of "modules" that handle various core functionality.[28][31][44][45][46] Modules are provided for file system I/O, networking (DNS, HTTP, TCP, TLS/SSL, or UDP), binary data (buffers), cryptography functions, data streams, and other core functions.[31][45][47] Node.js's modules use an API designed to reduce the complexity of writing server applications.[31][45]
+
+Node.js is officially supported on Linux, macOS, Microsoft Windows, SmartOS, FreeBSD, and IBM AIX.[3] The provided source code may also be built on similar operating systems or be modified by third parties to support others such as NonStop[48] and Unix servers. Alternatively, they can be written with CoffeeScript[49] (a JavaScript alternative), Dart or TypeScript (strongly typed forms of JavaScript), or any other language that can compile to JavaScript.[49][50]
+
+Node.js is primarily used to build network programs such as Web servers.[44] The biggest difference between Node.js and PHP is that most functions in PHP block until completion (commands execute only after previous commands finish), while Node.js functions are non-blocking (commands execute concurrently or even in parallel,[51][52] and use callbacks to signal completion or failure).[44]
+
 #### 平台架构
+
 #### 业界支持
+
 ### 发布
 原文 [https://en.wikipedia.org/wiki/Node.js#Releases](https://en.wikipedia.org/wiki/Node.js#Releases) 中有个图表总结了Node的每一期发布。笔者就不赘述翻译了。笔者查了下，自己机器上的Node版本为v8.9.4，属于Carbon系列。查Node版本的命令```$ node --version```
 ### 技术细节
+
 #### 线程
+
 #### V8
+
 #### 包管理
+
 #### 联合API
+
 #### 事件循环
+
 ### 项目管理
 
 
