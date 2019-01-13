@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Bug Fixes on my Blog"
-subtitle:   "博客修bug📝"
+title:      "Bug Fixes and Feature Adding on my Blog"
+subtitle:   "博客加功能、修bug📝"
 date:       2018-05-24
 author:     "starwavelin"
 header-img: "img/post-banner/post-bg-train-track.jpg"
