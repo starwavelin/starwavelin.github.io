@@ -32,7 +32,10 @@ dept.major.courseOffering = CourseOfferingList.Selected;
 ApplicationContext.get.executionContext.trans.setDirty(dept.major); // set 2nd level property dirty first
 ApplicationContext.get.executionContext.trans.setDirty(dept); // then set 1st level property (obj itself)
 ```
-
+But, the above is necessary only when you want to save both the `major` object and `dept` object. If in any case you just want to save the `major` object, and the `dept` object only holds the `major_id`, which means the change of the content of `major` will not trigger any change of the `dept` object, then, you just need to do   
+```
+ApplicationContext.get.executionContext.trans.setDirty(dept.major); // set 2nd level property dirty
+```
 
 ### 2019 Jan 3
 Error Message
