@@ -9,6 +9,31 @@ tags:
     - Extensible Note
 ---
 
+### 2019 Jan 4
+**Why sometimes we don’t want to return a promise, instead just calling a promise?**   
+ie.
+```
+return selection.save().then(() => {
+    const action = selection.checked ? Action.BadActionChecked : Action.BadActionUnchecked;
+    this.recordAction(action, selection.name);
+  });
+```
+Here, we don't `return this.recordAction(action, selection.name);` and just called `this.recordAction(action, selection.name);`  
+
+This is because: here we don't want to return the function call in purpose; we don't want the `recordAction()` in case break and delay the original logic. Without `return`, it will be fired but without changing any original logic.
+
+**Some Amorphic thing: set 2nd level property dirty**  
+If you modify the second level property of an object, you also need to setDirty for the 2nd level property as well as the first-level property. ie.
+```
+const dept = this.SBU.dept;
+dept.major.courseOffering = CourseOfferingList.Selected;
+// 1st level property: dept itself; 2nd level property: dept.major
+// ......
+ApplicationContext.get.executionContext.trans.setDirty(dept.major); // set 2nd level property dirty first
+ApplicationContext.get.executionContext.trans.setDirty(dept); // then set 1st level property (obj itself)
+```
+
+
 ### 2019 Jan 3
 Error Message
 ```
