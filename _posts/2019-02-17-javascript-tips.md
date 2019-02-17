@@ -46,3 +46,35 @@ console.log(array2);
 //   });
 // });
 ```
+
+#### filter() and find()
+Goal: I want to find a property based on another property's value within the same element/object
+比如：
+```
+const jsObjects = [
+   {a: 1, b: 2},
+   {a: 3, b: 4},
+   {a: 5, b: 6},
+   {a: 7, b: 8}
+];
+```
+我需要找到`b=6`的时候`a`的值。  
+**Solution 1: Use filter()**  
+[fitler() official doc on mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
+Basically, `filter()` applies to each element in the given array, and returns a new array.
+```
+const result = jsObjects.filter(item => {
+  return item.b === 6;
+})
+```
+Result is:
+`[ { a: 5, b: 6 } ]`  
+
+**Solution 2: Use find()**  
+`find()` finds the 1st element of the given array. So,
+```
+const result2 = jsObjects.find(item => {
+  return item.b === 6;
+})
+```
+`result2` is: `{ a: 5, b: 6 }`
