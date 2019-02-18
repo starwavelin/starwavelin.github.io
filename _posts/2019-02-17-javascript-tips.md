@@ -98,3 +98,33 @@ Do As:
 ```
 const dedupedVersionArray = Array.from(new Set(rawVersionArray));
 ```
+
+### 数据结构
+自设数据结构`MapObj`  
+```
+export interface MapObj<T> {
+  [key: string]: T;
+}
+
+// when Use, you would import something like
+import {MapObj} from '../interfaces/MapObj';
+```
+
+### JavaScript 中的OR，AND短路运算
+OR Operation: The focus is on the prior part. If the prior is valid then the whole thing is valid.（重点在前，前有则有）ie. `map[key] = map[key] || [];`  
+
+Based on this, ternary operation can be further simplified using OR Short-Circuit
+```
+//Originally
+return (result.alternativeName) ? result.alternativeName : result.key;
+
+//Now
+return result.alternativeName || result.key;
+```
+
+AND Short-Circuit
+`(some falsy expression) && expr` is short-circuit evaluated to the falsy expression.
+
+
+
+### “弱智”错误 | Very Silly Mistakes
