@@ -128,3 +128,23 @@ AND Short-Circuit
 
 
 ### “弱智”错误 | Very Silly Mistakes
+1. Don't over curly braces an object  
+Suppose we have `studentMap = {001: {key: '001', name: 'Zhang San'}}`, then we want to mock this object, we have
+```
+const student1 = Student.new();
+student1.key = '001';
+student1.name = 'Zhang San';
+```
+Then, we want to assign `student1` into `studentMap`. If we do
+```
+const studentMap = {
+  001: {student1}
+}
+```
+大错特错！ Cuz `studnet1` is over curly-braced. We should do
+```
+const studentMap = {
+  001: student1
+}
+```
+cuz a JavaScript object 自带 a pair of curly braces.
