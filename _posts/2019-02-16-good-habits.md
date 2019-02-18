@@ -24,3 +24,28 @@ getPresidencyTerm(isWholeLife: boolean, term: number) string {
 }
 ```
 `isWholeLife: boolean` is an added parameter, though it looked a little odd at the beginning that a boolean param is added with a string param :)
+
+
+### How to Make Code More Elegant?
+#### When "if", when "else"?
+If an "if statement" handles a corner case, you can determine if the following statements after "if statement" can be grouped into else condition, cuz "if statement" does Not need to exam extra same thing.  
+
+Original Way:
+```
+if (certain condition) {
+  complex statements
+}
+statement 1;
+statement 2;
+```
+
+Modified To:
+```
+if (certain condition) {
+  complex statements
+} else {
+  statement 1;
+  statement 2;
+}
+```
+But, this change is optional and totally your call.
