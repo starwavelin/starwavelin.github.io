@@ -126,6 +126,7 @@ const fruitMap = {
 ```
 Object.keys(fruitMap).map(key => fruitMap[key]);
 ```
+即：先得到keys,再去map keys对应的value。
 
 ##### See if a key name is within a map object  
 ```
@@ -153,7 +154,7 @@ AND Short-Circuit
 
 
 ### “弱智”错误 | Very Silly Mistakes
-1. Don't over curly braces an object  
+#### Don't over curly braces an object  
 Suppose we have `studentMap = {001: {key: '001', name: 'Zhang San'}}`, then we want to mock this object, we have
 ```
 const student1 = Student.new();
