@@ -43,6 +43,10 @@ $('.btn').click(event => {
 2. In TypeScript, “this” can support polymorphism, for example:
 `init(version: number): this` is better than `init(version: number): AConcreteType`
 
+### .property vs. [‘property’]
+When using TypeScript, type checking cannot work for `someObj[‘someProperty’]` so it is preferable to use `someObj.someProperty`.  
+But when `stringVar` is not obvious, I still have to use `sombObj[stringVar]`
+
 ### filter()
 #### 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
 Given `array1 = [{a:2, b:2}, {a:3, b:3}, {a:1, b:1}];`, `array2 = [{a:17, b:14}, {a:1, b:1}, {a:2, b:2}, {a:3, b:3}, {a:4, b:4}];`, we want the result to be `[{a:17, b:14}, {a:4, b:4}]`  
@@ -130,6 +134,7 @@ Do As:
 ```
 const dedupedVersionArray = Array.from(new Set(rawVersionArray));
 ```
+The collections (map, sets and weak maps) are introduced since ES6 (ES2015).
 
 ### 数据结构
 #### 自设数据结构`MapObj`  
