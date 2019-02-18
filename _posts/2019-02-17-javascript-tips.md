@@ -100,7 +100,7 @@ const dedupedVersionArray = Array.from(new Set(rawVersionArray));
 ```
 
 ### 数据结构
-自设数据结构`MapObj`  
+#### 自设数据结构`MapObj`  
 ```
 export interface MapObj<T> {
   [key: string]: T;
@@ -109,6 +109,31 @@ export interface MapObj<T> {
 // when Use, you would import something like
 import {MapObj} from '../interfaces/MapObj';
 ```
+
+#### Map型数据结构相关
+##### TS中不可用`Object.values()`怎么办？  
+比如在JavaScript中，我有
+```
+const fruitMap = {
+	"apple": {key: "apple", taste: "sweet"},
+  "orange": {key: "orange", taste: "sour"}
+}
+```
+我想得到`[{key: "apple", taste: "sweet"}, {key: "orange", taste: "sour"}]`, 只需要`Object.values(fruitMap)`
+
+现在，在TypeScript中，没有`Object.values()`功能，怎么办？  
+也没关系，我们leverage `Object.keys() + map()`就可以了。 具体做法是：
+```
+Object.keys(fruitMap).map(key => fruitMap[key]);
+```
+
+##### See if a key name is within a map object  
+```
+if (!(this.latestExamVersion in examMap)) {
+  examMap[this.latestExamVersion] = ExamLookup.createExamMap(latestVersionedExamLookup.data);
+}
+```
+总之，公式是`keyname in mapObj`
 
 ### JavaScript 中的OR，AND短路运算
 OR Operation: The focus is on the prior part. If the prior is valid then the whole thing is valid.（重点在前，前有则有）ie. `map[key] = map[key] || [];`  
