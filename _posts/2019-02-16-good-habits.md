@@ -49,3 +49,6 @@ if (certain condition) {
 }
 ```
 But, this change is optional and totally your call.
+
+#### When to use _ variables?
+It is a naming convention for PRIVATE member variables. As [here](https://stackoverflow.com/questions/6903022/why-do-we-use-in-variable-names)

@@ -11,6 +11,38 @@ tags:
 ---
 Below are my personal notes on how to efficiently and smartly use JavaScript functions and features.
 
+### "this" keyword
+In the code snippets below, assume there are already controllers wrapping them, and “this” keyword refers to the controllers wrapping them.
+
+**ES5 (ECMAScript 2009) Snippet**
+```
+var _this = this;
+$('.btn').click(function(event) {
+  _this.sendData();
+});
+```
+即需要外面有个`_this`去引用`this`然后把`this`传递进入到`click()`函数内部的callback函数。
+
+**`bind`: Another way of writing the same ES5 snippet and getting rid of “_this”**
+```
+$('.btn').click(function(event) {
+  this.sendData();
+}).bind(this);
+```
+
+**ES6 (ECMAScript 2015) Snippet**
+```
+$('.btn').click(event => {
+  this.sendData();
+});
+```
+通过arrow function免去了`bind(this)`.
+
+注意：
+1. `this` keyword in a static function may cause confusion. When invoking another static function within a function, use `ClassName.StaticFunction()`
+2. In TypeScript, “this” can support polymorphism, for example:
+`init(version: number): this` is better than `init(version: number): AConcreteType`
+
 ### filter()
 #### 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
 Given `array1 = [{a:2, b:2}, {a:3, b:3}, {a:1, b:1}];`, `array2 = [{a:17, b:14}, {a:1, b:1}, {a:2, b:2}, {a:3, b:3}, {a:4, b:4}];`, we want the result to be `[{a:17, b:14}, {a:4, b:4}]`  
