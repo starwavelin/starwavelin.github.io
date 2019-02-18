@@ -78,3 +78,23 @@ const result2 = jsObjects.find(item => {
 })
 ```
 `result2` is: `{ a: 5, b: 6 }`
+
+#### 对于callback function, it can be defined implicitly or explicitly
+This not only applies to `filter()` but I just use it as an example.
+For the examples above, they are `fitler(cb_implicit_definition)`. Below, let me show you an explicit callback definition and invoke it for filter() using the callback function's signature.  
+```
+// exists() is a function in SomeClass
+static exists(value: any): boolean {
+  return value !== undefined && value !== null && value !== '';
+}
+
+// below statement is from another class
+const rawVersionArray = this.results.map(item => item.version).filter(SomeClass.exists);
+```
+运行结果就是， `rawVersionArray` will not have a version which might be `null`.
+
+那，假如rawVersionArray contains repetitive versions, what shall I do?  
+Do As:
+```
+const dedupedVersionArray = Array.from(new Set(rawVersionArray));
+```
