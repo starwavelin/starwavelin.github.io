@@ -4,7 +4,7 @@ title:      "编程好习惯"
 subtitle:   "Good Programming Habits"
 date:       2019-02-16
 author:     "codingbro"
-header-img: "img/post-banner/post-bg-js.jpg"
+header-img: "img/post-banner/post-bg-github-blog.jpg"
 tags:
     - Extensible Note
 ---
