@@ -66,7 +66,7 @@ await nameMappingArray.forEach(async ([x, y]) => {
   await updateOldNameToNewName(x, y);
 })
 ```
-其实这不算严格意义上的destructuring, 算array套嵌array吧。大array中的每一个小array刚好都是包含两个元素x和y。`async ([x, y])`其实就是拿小array作为parameter。
+Destructuring用在了`async ([x, y])`, `[x, y]`是对原来的array的表达。`nameMappingArray`是array套嵌array，大array中的每一个小array刚好都是包含两个元素x和y。`async ([x, y])`其实就是拿小array作为parameter。
 
 ### filter()
 #### 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
@@ -156,6 +156,25 @@ Do As:
 const dedupedVersionArray = Array.from(new Set(rawVersionArray));
 ```
 The collections (map, sets and weak maps) are introduced since ES6 (ES2015).
+
+### map()
+`map()` applies to an array. `map()` method creates a new array with the results of calling a provided function on every element in the calling array. And, the resulting array will always be the same length as the original array.
+```
+const array1 = [1, 4, 9, 16];
+// const multi = x => x * 3;
+// pass a function to map
+// const map1 = array1.map(multi);
+const map1 = array1.map(x => x * 3);
+
+console.log(map1);
+// expected output: Array [3, 12, 27, 48]
+```
+
+#### map() + join()
+以下是一个`map()`与`join()`连用的例子，得到的是一条string，string中的每一个名字之间都用单引号-逗号-单引号相连（主要用于写sql）。
+```
+const toQueryNames = nameMappingArray.map(([key, newName]) => newName).join('\', \'');
+```
 
 ### 数据结构
 #### 自设数据结构`MapObj`  
