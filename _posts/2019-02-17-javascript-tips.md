@@ -238,6 +238,8 @@ const fruitMap = fruits.reduce((map: MapObj<Fruit>, fruit: Fruit) => {
 ```
 注意：不可忘记`return map;` statement。因为`reduce()`函数每作用一次当前对象，就要有一个返回对象去代替原来的accumulator。`reduce()`函数就是对这个返回对象进行累加。
 
+同样是[poka-techbolog](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)，作者给出了连用`filter()`, `map()`和`reduce()`的例子，有时间看看吧。
+
 ### 数据结构
 #### 自设数据结构`MapObj`  
 ```
