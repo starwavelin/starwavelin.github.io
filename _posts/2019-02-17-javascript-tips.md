@@ -176,6 +176,68 @@ console.log(map1);
 const toQueryNames = nameMappingArray.map(([key, newName]) => newName).join('\', \'');
 ```
 
+### reduce()
+`reduce()`是我以前认为比较难掌握的一个函数，主要因为中文中对于reduce的解释是“减少”，后来查了字典，才知reduce也有“归纳为”的意思。在JS的语境中，将`reduce()`理解为“合并”会更有帮助。BTW，“[MapReduce](https://en.wikipedia.org/wiki/MapReduce)”是一种编程模型。
+
+Just like `map()`, `reduce()` also runs a callback for each element of an array. What’s different here is that `reduce` passes the result of this callback (the accumulator) from one array element to another.
+
+The `accumulator` can be pretty much anything (integer, string, object, etc.) and must be instantiated or passed when calling `reduce()`. "accumulator" 我将其翻译为“累加器”。
+
+Now let me use an example from [poka-techbolog](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d) to illustrate how to use `reduce()`
+
+```
+假设有一组飞行员信息如下：
+var pilots = [
+  {
+    id: 10,
+    name: "Poe Dameron",
+    years: 14,
+  },
+  {
+    id: 2,
+    name: "Temmin 'Snap' Wexley",
+    years: 30,
+  },
+  {
+    id: 41,
+    name: "Tallissan Lintra",
+    years: 16,
+  },
+  {
+    id: 99,
+    name: "Ello Asty",
+    years: 22,
+  }
+];
+```
+
+我要求他们的飞行年数总和：
+```
+const totalYears = pilots.reduce((accumulator, pilot) => accumulator + pilot.years, 0);
+// 这里，accumulator是累加器，前面说了。pilot是当前的pilot信息，即当前object（有时是当前value）。0是starting value.
+```
+
+假如我现在要求拿到最有经验的那个飞行员的对象(to get the most experienced pilot data), how shall I do?
+```
+const mostExperiencedPilot = pilots.reduce((oldest, pilot) => {
+  return (oldest.years || 0) > pilot.years ? oldest : pilot;
+}, {});
+```
+理解这个版本的reduce的难点就在于，首先它不是在做加法运算。理解的突破口在于明白`reduce(callback)`函数中的callback函数中的curObject(这里为pilot)是在不断迭代的。第0位pilot为"Poe Dameron"，由于oldest还没有定义，所以（0 > 14）不成立，那么就由当前的这个第0位pilot "Poe Dameron"的信息赋值给`oldest`。迭代到第1位pilot "Temmin 'Snap' Wexley", (14 > 30)不成立，所以`oldest`更新为 第1位pilot "Temmin 'Snap' Wexley"的信息。依次类推。最后由于`oldest`始终为 第1位pilot "Temmin 'Snap' Wexley"的信息，返回这个对象即可。
+
+#### 利用reduce()生成一个map对象
+非常像上面的`reduce()`作用于pilots的第二个例子。要生成map对象，其starting value必须是`{}`。然后，就是要搞清楚accumulator。accumulator一开始是一个空的map。那么我们就要搞清楚累加规则是怎么回事。做map,每次累加的就是一对键值对。最后，每个当前的curObject从哪里来，当然是从要被reduce的array当中来啦。
+```
+const fruitMap = fruits.reduce((map: MapObj<Fruit>, fruit: Fruit) => {
+  let key = fruit.key;
+  if (key && typeof key === 'string') {
+    map[key] = fruit;
+  }
+  return map;
+}, {});
+```
+注意：不可忘记`return map;` statement。因为`reduce()`函数每作用一次当前对象，就要有一个返回对象去代替原来的accumulator。`reduce()`函数就是对这个返回对象进行累加。
+
 ### 数据结构
 #### 自设数据结构`MapObj`  
 ```
