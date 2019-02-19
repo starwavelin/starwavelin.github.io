@@ -47,6 +47,27 @@ $('.btn').click(event => {
 When using TypeScript, type checking cannot work for `someObj[‘someProperty’]` so it is preferable to use `someObj.someProperty`.  
 But when `stringVar` is not obvious, I still have to use `sombObj[stringVar]`
 
+### Destructuring
+The mozilla doc for [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)  
+Note: for `const` variables, once defined must initialized, otherwise `Error:  Missing initializer in const declaration`
+
+#### Destructuring + Tuple
+The definition of [Tuple](https://en.wikipedia.org/wiki/Tuple)  
+
+In my example, I have an array of old names and new names. Each old name is mapped to exactly one new name to form bijection. Then, I can define an array of 2-tuples, and use destructure assignment in a callback function.
+```
+const nameMappingArray = [
+  ['non_biased_employee_incentive', 'employee_incentive'],
+  ['non_biased_employee_name', 'employee_name'],
+  ['non_biased_employee_salary', 'employee_salary']
+];
+
+await nameMappingArray.forEach(async ([x, y]) => {
+  await updateOldNameToNewName(x, y);
+})
+```
+其实这不算严格意义上的destructuring, 算array套嵌array吧。大array中的每一个小array刚好都是包含两个元素x和y。`async ([x, y])`其实就是拿小array作为parameter。
+
 ### filter()
 #### 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
 Given `array1 = [{a:2, b:2}, {a:3, b:3}, {a:1, b:1}];`, `array2 = [{a:17, b:14}, {a:1, b:1}, {a:2, b:2}, {a:3, b:3}, {a:4, b:4}];`, we want the result to be `[{a:17, b:14}, {a:4, b:4}]`  
