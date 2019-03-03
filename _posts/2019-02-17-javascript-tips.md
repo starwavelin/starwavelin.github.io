@@ -104,6 +104,20 @@ console.log(array2);
 // });
 ```
 
+解答：原来是因为要用`forEach` loop解此题的话，需要用一个变量来存`forEach`过程中得到的`boolean`值。如下：
+```
+array2 = array2.filter(item => {
+  let res = true;
+  array1.forEach(oldItem => {
+    if (item.a === oldItem.a && item.b === oldItem.b) {
+      res = res && false;
+    }
+  });
+  return res;
+});
+```
+以上解法可行，但由于`forEach` loop不能马上退出，一定要让`item`跟`array1`中的所有元素都比对完以后，才会给出个`res`的结果是真是假，这样就比再上面的`for-of` loop解法累赘了。此题建议用`for-of` loop解法。
+
 #### filter() and find()
 Goal: I want to find a property based on another property's value within the same element/object
 比如：
