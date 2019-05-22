@@ -6,10 +6,11 @@
 
 ### Features Added
 1. [x] Enabled Disqus Commenting [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/#2018-05-28)
-2. [] @TODO Add advertisement feature to my website
-3. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
-4. [] @TODO Implement a search bar in Sidebar Container
-5. [] @TODO Allow blog viewers to toggle between the available languages of an article
+2. [] @TODO Add site traffic statistics feature (branch: blog/01/site-statistics)
+3. [] @TODO Add advertisement feature to my website
+4. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
+5. [] @TODO Implement a search bar in Sidebar Container
+6. [] @TODO Allow blog viewers to toggle between the available languages of an article
 
 
 ### Bugs and Fixes
