@@ -13,6 +13,7 @@
 5. [] @TODO Implement a search bar on top navigation container
 6. [] @TODO Allow blog viewers to toggle between the available languages of an article
 7. [] @TODO Implement a reward button for articles
+8. [] @TODO Provide an XML for RSS readers
 
 
 ### Bugs and Fixes
