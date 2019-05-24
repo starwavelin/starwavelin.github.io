@@ -5,21 +5,18 @@
 - [Acknowledgement](#acknowledgement)
 
 ### Features Added
-1. [x] Enabled Disqus Commenting [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/#2018-05-28)
+[details](https://starwavelin.com/2019/05/24/feature-adding-on-my-blog/)
+1. [x] Enabled Disqus Commenting
 2. [] @TODO Add site traffic statistics feature (branch: blog/01/site-statistics)
-3. [] @TODO Add advertisement feature to my website
+3. [] @TODO Add advertisement feature
 4. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
-5. [] @TODO Implement a search bar in Sidebar Container
+5. [] @TODO Implement a search bar on top navigation container
 6. [] @TODO Allow blog viewers to toggle between the available languages of an article
+7. [] @TODO Implement a reward button for articles
 
 
 ### Bugs and Fixes
-- 2018-05-23 [details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/#2018-05-23)
-  - [x] Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS
-  - [x] Some user tested and experienced it took 5 sec for this site to load; I tested in Chrome Guest mode seeing 3.29 sec to load. Could I improve the load speed?
-- 2018-05-21  
-  - [x] Updated the ```baseurl:``` in ```_config.yml``` file from "/huxblog-boilerplate" to "" and served my blog from the root directory of ```GITHUB_USERNAME.github.io```
-  - [x] Fixed the issue of [cannot display SNS Zhihu and GitHub icons](https://github.com/Huxpro/huxblog-boilerplate/issues/17) based on [pull request #21](https://github.com/Huxpro/huxblog-boilerplate/pull/21/commits/207a48449f06b3a509c861a4622d92e48855c698)
+[details](https://starwavelin.com/2018/05/24/bug-fixes-on-my-blog/)
 
 ### Acknowledgement
 - Hux Blog's [Boilerplate Version](https://github.com/Huxpro/huxblog-boilerplate)

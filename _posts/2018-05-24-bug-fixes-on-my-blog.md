@@ -1,24 +1,19 @@
 ---
 layout:     post
-title:      "Bug Fixes and Feature Adding on my Blog"
-subtitle:   "博客加功能、修bug📝"
+title:      "Bug Fixes on my Blog"
+subtitle:   "博客修bug📝"
 date:       2018-05-24
 author:     "starwavelin"
-header-img: "img/post-banner/post-bg-train-track.jpg"
+header-img: "img/post-banner/post-bg-debug.jpg"
 tags:
     - 前端
     - Extensible Note
 ---
 
-### 2018-05-28
-**Configure Disqus on my blog**  
-Besides adding my disqus shortname to ```_config.yml```, I also need to follow hints [here](https://github.com/Huxpro/huxpro.github.io/issues/157)  
-Basically, it means on [this page](https://disqus.com/profile/signup/intent/),
-I need to select the option "I want to install Disqus on my site"
-
-
-
 ### 2018-05-23
+总的来讲做了这一件事：Improve the content delivery network of font-awesome (or other libraries as well) from CDN to CDNJS  
+具体见下
+
 **CDN**  
 What libraries are using CDN for now?
 1. **highlight.js v.8.6** (commented in the given template)
@@ -42,3 +37,7 @@ And Yes, the loading speed has been dramatically improved to 1.35 second.
 For people from mainland China, if you have difficulty viewing the SNS icons as below,
 ![sns-icons](/img/in-post/180524-bug-fixes/SNS_icons.png)
 please use Disqus (if available to you) or any other SNS/contact method to let me know. I will do my best to balance the services to my audiences. Thanks!
+
+### 2018-05-21  
+1. Updated the ```baseurl:``` in ```_config.yml``` file from "/huxblog-boilerplate" to "" and served my blog from the root directory of ```GITHUB_USERNAME.github.io```
+2. Fixed the issue of [cannot display SNS Zhihu and GitHub icons](https://github.com/Huxpro/huxblog-boilerplate/issues/17) based on [pull request #21](https://github.com/Huxpro/huxblog-boilerplate/pull/21/commits/207a48449f06b3a509c861a4622d92e48855c698)
