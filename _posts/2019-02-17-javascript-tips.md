@@ -69,7 +69,7 @@ await nameMappingArray.forEach(async ([x, y]) => {
 Destructuring用在了`async ([x, y])`, `[x, y]`是对原来的array的表达。`nameMappingArray`是array套嵌array，大array中的每一个小array刚好都是包含两个元素x和y。`async ([x, y])`其实就是拿小array作为parameter。
 
 ### filter()
-#### 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
+#### Dedup 问题: 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
 Given `array1 = [{a:2, b:2}, {a:3, b:3}, {a:1, b:1}];`, `array2 = [{a:17, b:14}, {a:1, b:1}, {a:2, b:2}, {a:3, b:3}, {a:4, b:4}];`, we want the result to be `[{a:17, b:14}, {a:4, b:4}]`  
 
 Solution:
