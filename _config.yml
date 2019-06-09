@@ -11,7 +11,7 @@ baseurl: ""         # original: /huxblog-boilerplate, for example, '/blog' if yo
 
 
 # SNS settings
-RSS: false
+RSS: true
 facebook_username:
 github_username:    starwavelin
 instagram_username: codingbro
@@ -91,13 +91,5 @@ friends: [
   {
     title: "Oraant",
     href: "http://blog.oraant.cc/introduction/"
-  },
-  {
-    title: "Tree",
-    href: "https://yueyingcui.wordpress.com/"
-  },
-  {
-    title: "Miao Designer",
-    href: "http://shellmiao-design.com/"
   }
 ]
