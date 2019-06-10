@@ -238,7 +238,7 @@ const mostExperiencedPilot = pilots.reduce((oldest, pilot) => {
 }, {});
 ```
 理解这个版本的reduce的难点就在于，首先它不是在做加法运算，但是是在合并某个东西。  
-所以，理解的突破口在于明白`reduce(callback)``函数中的callback函数中的当前对象current object，或者说加法器 (这里为oldest) 是在不断迭代自身的。  
+所以，理解的突破口在于明白`reduce(callback)`函数中的callback函数中的当前对象current object，或者说加法器 (这里为oldest) 是在不断迭代自身的。  
 第0位pilot为"Poe Dameron"，由于oldest还没有定义，所以（0 > 14）不成立，那么就由当前的这个第0位pilot "Poe Dameron"的信息赋值给`oldest`。迭代到第1位pilot "Temmin 'Snap' Wexley", (14 > 30)不成立，所以oldest更新为 第1位pilot "Temmin 'Snap' Wexley"的信息。依次类推。最后由于`oldest`始终为 第1位pilot "Temmin 'Snap' Wexley"的信息，返回这个对象即可。
 
 #### 利用reduce()生成一个map对象
