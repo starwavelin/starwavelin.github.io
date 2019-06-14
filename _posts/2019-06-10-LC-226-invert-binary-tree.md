@@ -8,7 +8,6 @@ header-img:
 tags:
     - 二叉解空间
     - Binary Tree
-    - LeetCode
 ---
 ### 什么是算法面试的套路？
 很多小伙伴发现自己在北美的软件工程师算法面试中，题都答对了，为什么最后没有给Offer呢？
@@ -79,13 +78,58 @@ class Solution {
 }
 ```
 
+### 思路2: Divide and Conquer (分治法)思想
+这道题也可以通过自底向上(bottom-up approach)的 **分治思想的递归方法** 来求解，也可以叫做后序遍历的方法。后序遍历是指先处理好根的左节点、而后处理根的右节点，最后再来处理根的本身。大家可以看我草稿纸上画的：
+![oh-my-zsh](/img/in-post/20190610-lc-226/thought2.png)
+
+即自底向上很重要的一个思想是：我们要假定overall的根的左子树都已经搞定了（反转好了），右子树也已经反转好了，然后剩下的步骤就是搞定overall的根的左右两边。  
+那，我们怎么才能用代码实现“overall的根的左子树都已经搞定了”， “overall的根的右子树都已经搞定了”----靠递归嘛。
+
+### 代码2
+```
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null)
+            return null;
+        TreeNode tmp = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(tmp);
+        return root;
+    }
+}
+```
+
+**代码小结**  
+可以看出，这道题的分治法（Divide and Conquer, 简称 D&C）代码也不长，就6行。所以，这个分治法代码可以作为一个模板，解决以后的类似可以用D&C求解的问题。
+```
+模板：
+public TreeNode someFunction(TreeNode root) {
+   1. write base case
+
+   2. write division，conceptually as below:
+   root.left = someFunction(root.right);
+   root.right = someFunction(root.left);
+
+   3. Conquer
+   ie. combine some results
+   return value;
+}
+```
+用 **代码2** 来比对这个模板，我觉得吧，代码2还少了"3. Conquer"的部分，不是最好的例子，但以后遇到的题目肯定会用到具体的Conquer操作。  
+另外就是，有朋友会问为什么实际的代码中还要用到`tmp`变量, 而不是直接的 `root.left = someFunction(root.right);` `root.right = someFunction(root.left);`那样的写法。道理也很简单，当你执行`root.left = someFunction(root.right);`的时候，你已经把`root.left`进行改变了嘛，所以，当之后的函数要去作用的是**原本的root.left**的时候，你是不是应该把**原本的root.left**用一个变量先存起来呢？
+
 ### 时间与空间复杂度分析
 时间复杂度，由于二叉树的每一个节点都会遍历到，所以是`O(n)`，n为二叉树的节点个数。  
 空间复杂度，由于只新开了一个变量`tmp`，所以空间复杂度为`O(n)`。
 
 ### 测试
 面试中的测试其实就是表现你的好习惯。你可以用原有的例子，或者新举一个例子，在白板上手动跑一下你的代码，由你来带领面试官验证你的代码的正确性。万一，你在手动白板测试过程中发现自己哪里做的不对，也不要慌张，想想是代码的哪一个环节出错了，对应的进行修改。在你有这样好习惯的基础之上，面试官也是很愿意跟你一起看看的。毕竟，北美的算法面试不是高考。算法面试的主要目标是找到未来的可以很好进行合作的同事，所以能力一方面，沟通协调等软实力则是也很重要的另一方面。
-
-### 后记
-由于时间关系，思路2的分治法解法今天就先不讲了。笔记哥会将该解法更新到笔记哥的博客日志里的。
-由于微信推文的不可更改性，您可以通过以下链接查看本题解答对应的笔记哥博客日志：
