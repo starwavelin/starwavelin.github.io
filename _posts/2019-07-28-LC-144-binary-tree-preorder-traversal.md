@@ -76,7 +76,7 @@ class Solution {
         // 递归的recursive情况: 从preorder定义出发
         res.add(root.val);  // 添加当前root的值进入到结果列表
         traverse(root.left, res);  // 处理当前root的左子树
-        traverse(root.left, res);  // 处理当前root的右子树
+        traverse(root.right, res);  // 处理当前root的右子树
     }
 }
 ```
