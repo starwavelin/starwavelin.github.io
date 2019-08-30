@@ -11,8 +11,10 @@ tags:
 ---
 Below are my personal notes on how to efficiently and smartly use JavaScript functions and features.
 
-### "this" keyword
+## "this" keyword
 In the code snippets below, assume there are already controllers wrapping them, and “this” keyword refers to the controllers wrapping them.
+
+It is usually used when a callback function needs to reference the "this" context outside of it.
 
 **ES5 (ECMAScript 2009) Snippet**
 ```
@@ -43,11 +45,11 @@ $('.btn').click(event => {
 2. In TypeScript, “this” can support polymorphism, for example:
 `init(version: number): this` is better than `init(version: number): AConcreteType`
 
-### .property vs. [‘property’]
+## .property vs. [‘property’]
 When using TypeScript, type checking cannot work for `someObj[‘someProperty’]` so it is preferable to use `someObj.someProperty`.  
-But when `stringVar` is not obvious, I still have to use `sombObj[stringVar]`
+But when the `propertyName` of an object is dynamic, I still have to use `sombObj[propertyName]`.
 
-### Destructuring
+## Destructuring
 The mozilla doc for [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)  
 Note: for `const` variables, once defined must initialized, otherwise `Error:  Missing initializer in const declaration`
 
@@ -68,7 +70,7 @@ await nameMappingArray.forEach(async ([x, y]) => {
 ```
 Destructuring用在了`async ([x, y])`, `[x, y]`是对原来的array的表达。`nameMappingArray`是array套嵌array，大array中的每一个小array刚好都是包含两个元素x和y。`async ([x, y])`其实就是拿小array作为parameter。
 
-### filter()
+## filter()
 #### Dedup 问题: 两对象类型数组比对后，根据数组1，去除掉数组2中与数组1相同的元素
 Given `array1 = [{a:2, b:2}, {a:3, b:3}, {a:1, b:1}];`, `array2 = [{a:17, b:14}, {a:1, b:1}, {a:2, b:2}, {a:3, b:3}, {a:4, b:4}];`, we want the result to be `[{a:17, b:14}, {a:4, b:4}]`  
 
@@ -171,7 +173,7 @@ const dedupedVersionArray = Array.from(new Set(rawVersionArray));
 ```
 The collections (map, sets and weak maps) are introduced since ES6 (ES2015).
 
-### map()
+## map()
 `map()` applies to an array. `map()` method creates a new array with the results of calling a provided function on every element in the calling array. And, the resulting array will always be the same length as the original array.
 ```
 const array1 = [1, 4, 9, 16];
@@ -190,7 +192,7 @@ console.log(map1);
 const toQueryNames = nameMappingArray.map(([key, newName]) => newName).join('\', \'');
 ```
 
-### reduce()
+## reduce()
 `reduce()`是我以前认为比较难掌握的一个函数，主要因为中文中对于reduce的解释是“减少”，后来查了字典，才知reduce也有“归纳为”的意思。在JS的语境中，将`reduce()`理解为“合并”会更有帮助。BTW，“[MapReduce](https://en.wikipedia.org/wiki/MapReduce)”是一种编程模型。
 
 Just like `map()`, `reduce()` also runs a callback for each element of an array. What’s different here is that `reduce` passes the result of this callback (the accumulator) from one array element to another.
@@ -256,7 +258,7 @@ const fruitMap = fruits.reduce((map: MapObj<Fruit>, fruit: Fruit) => {
 
 同样是[poka-techbolog](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)，作者给出了连用`filter()`, `map()`和`reduce()`的例子，有时间看看吧。
 
-### 数据结构
+## 数据结构
 #### 自设数据结构`MapObj`  
 ```
 export interface MapObj<T> {
@@ -293,7 +295,7 @@ if (!(this.latestExamVersion in examMap)) {
 ```
 总之，公式是`keyname in mapObj`
 
-### JavaScript 中的OR，AND短路运算
+## JavaScript 中的OR，AND短路运算
 OR Operation: The focus is on the prior part. If the prior is valid then the whole thing is valid.（重点在前，前有则有）ie. `map[key] = map[key] || [];`  
 
 Based on this, ternary operation can be further simplified using OR Short-Circuit
@@ -310,8 +312,8 @@ AND Short-Circuit
 
 
 
-### “弱智”错误 | Very Silly Mistakes
-#### Don't over curly braces an object  
+## “弱智”错误 | Very Silly Mistakes
+#### Don't over curly braces an object
 Suppose we have `studentMap = {001: {key: '001', name: 'Zhang San'}}`, then we want to mock this object, we have
 ```
 const student1 = Student.new();
@@ -331,3 +333,22 @@ const studentMap = {
 }
 ```
 cuz a JavaScript object 自带 a pair of curly braces.
+
+#### When toString() function applies to an object or Error
+```
+> new Error().toString()
+< "Error"
+```
+```
+> {}.toString()
+X Uncaught SyntaxError: Unexpected token .
+```
+```
+> ({}).toString()
+< "[object Object]"
+```
+```
+> ({a: 'Im A', b: 'Haha'}).toString()
+< "[object Object]"
+```
+小结：基本上就是单独的一对curly braces跟`.toString()`会报错，要跟的话必须加上小括号。
