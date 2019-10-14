@@ -62,7 +62,7 @@ tags:
 以后，如果无特别标注，笔记哥的每个解题报告所谈的空间复杂度，都是**只考虑程序运行过程中所要用的额外辅助空间**，不考虑存储程序运行的结果所需要占用的空间。
 
 ### 勘误
-1. 笔记哥的[LeetCode第104题](http://starwavelin.com/2019/08/17/LC-104-maximum-depth-of-binary-tree/)解题报告  
+1. 笔记哥的[LeetCode第104题](../../../../2019/08/17/LC-104-maximum-depth-of-binary-tree/)解题报告  
 笔记哥原本是写
 > 空间复杂度，由于仅新开两个整数类型的变量left right来存中间计算的深度的结果，所以空间复杂度为O(1)。   
 
@@ -80,7 +80,7 @@ tags:
   在求最大深度的过程中，函数的**自我调用过程**（即递归过程）会把函数参数(parameter)放到内存的栈里。对于要算到`3-20-15`或者`3-20-7`所形成的深度，这个自我调用过程会使得内存的栈至少会放入 3， 20， 7 这三个节点。所以，内存栈会存放的最大节点数目为`log(n)`，`n`为这棵二叉树的总的节点数。  
   所以，这道题的空间复杂度应当为`O(log(n))`, 或者你写做`O(h)` `h`--为树的深度，也可以。
 
-2. 笔记哥的[LeetCode第144题](http://starwavelin.com/2019/07/28/LC-144-binary-tree-preorder-traversal/) [LeetCode第145题](http://starwavelin.com/2019/08/03/LC-145-binary-tree-postorder-traversal/)解题报告   
+2. 笔记哥的[LeetCode第144题](../../../../2019/07/28/LC-144-binary-tree-preorder-traversal/) [LeetCode第145题](../../../../2019/08/03/LC-145-binary-tree-postorder-traversal/)解题报告   
 在这两题的解题报告的结尾，我原本写道：
 > 空间复杂度，由于新开了一个变量用于存所有节点的值的res，所以空间复杂度为O(n)  
 
