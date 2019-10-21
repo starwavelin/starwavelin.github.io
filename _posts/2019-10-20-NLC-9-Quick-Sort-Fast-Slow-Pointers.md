@@ -79,10 +79,49 @@ private static void swap(int[] nums, int i, int j) {
 
 ### pivot总选待排序数组最右边元素的算法过程
 
+![oh-my-zsh](/img/in-post/20191020-quick-sort/fast_slow_pointer_pivot_always_right_1.jpg)
 
+![oh-my-zsh](/img/in-post/20191020-quick-sort/fast_slow_pointer_pivot_always_right_2.jpg)
 
 ### 代码实例2
+```
+public static void sort(int[] nums) {
+  if (nums == null || nums.length == 0) {
+    return;
+  }
+  quicksort(nums, 0, nums.length - 1);
+}
 
+private static void quicksort(int[] nums, int left, int right) {
+  if (left < right) {
+    int partitionIndex = partition(nums, left, right);
+    quicksort(nums, left, partitionIndex - 1);
+    quicksort(nums, partitionIndex + 1, right);
+  }
+}
+
+private static int partition(int[] nums, int left, int right) {
+  int pivot = right;
+  int i = left - 1; // i is the slow Pointer
+  // j is the fast Pointer
+  for (int j = left; j <= pivot - 1; j++) {
+    if (nums[j] < nums[pivot]) {
+      i++;
+      if (i != j) {
+        swap(nums, i, j);
+      }
+    }
+  }
+  swap(nums, pivot, i + 1);
+  return i + 1;
+}
+
+private static void swap(int[] nums, int i, int j) {
+  int tmp = nums[i];
+  nums[i] = nums[j];
+  nums[j] = tmp;
+}
+```
 
 ### 测一测
 下面还提供了一段可以在Eclipse或其他Java语言IDE里面跑起来的代码片段，您只需要复制粘贴下面代码到与上面答案代码一起的同一个class当中，就可以跑起来，输入自己的测试样例，看看参考的答案代码是否正确。
