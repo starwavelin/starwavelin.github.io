@@ -10,3 +10,4 @@ gfm-toc
 # from default jekyll template
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
