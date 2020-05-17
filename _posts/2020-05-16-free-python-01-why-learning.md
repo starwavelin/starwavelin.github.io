@@ -60,12 +60,100 @@ V. 数据可视化
 
 好。看到这里，读者你只需了解，我们即将写的Python程序，以及在模块一. Python基础和模块二. Python数据结构中要写的Python程序，只会在CPU和内存当中运行。之后涉及到爬网页的部分，我们会涉及到Network。然后把爬到的数据存到硬盘的数据库里，我们会用到二级存储结构--硬盘。
 
-### 从我们的平常说话来理解编程
-【有待补充】
+### 从日常说话来理解编程
+编程其实就像我们的日常说话，只是不同于人与人之间对话，编程是人向电脑说话。再者，人和人之间的对话是可以比较随意的，但编程中对电脑说话一定要符合电脑程序所能理解的逻辑以及关键词。
+
+举个栗子，小王对他女票说：“520我带你去本杰明牛排店搓一顿吧。”这是日常随性对话。
+
+如果要弄得逻辑一点，小王应该这么说：“如果今天是5月20日，我就带你去本杰明牛排店吃牛排。”这就像我们的小学生造句--“如果（怎样怎样），就（怎样怎样）”。从自然语言的语法角度分析，这句话是具备了条件状语“如果（怎样怎样）”。
+
+好，用Python编程语言模拟上面的有条件状语句子，大致就是:
+```python
+if today == 'May 20':
+    print('Bring my girlfriend to Benjamin Steak')
+else:
+    print('Do Nothing')
+```
+
+在这段Python代码中，`if`就是“如果”的意思，`today == 'May 20'`是简要的表示先前已经给定的一个名为`today`的变量，当它等于`'May 20'`这个形态的时候，表示“今天是5月20号”了。那5月20号要做什么呢，`print('Bring my girlfriend to Benjamin Steak')`用来表示“带女朋友去本杰明牛排店搓一顿”这个举动。`print`就是“打印”的意思，它会把单引号里面的东西打印出来到你的Atom的Console区域，或者你在终端(Terminal)运行代码的话就会打印在你的终端。【关于Atom这个免费软件等信息参看免费Python小课第0课的内容】
+
+以上只是一个从概念上的对人类的一句话的Python举例，假如你无法在Python环境敲上面的代码并运行，不用着急。我只是想说，有时候人跟Python对话比人跟人对话还要容易，尤其当你在外国工作生活的时候，用的是你的第二语言--英语。要知道，英语当中至少有17万多的词汇。
+
+![apps](/img/in-post/20200516-free-python-01/english-words.png)
+<small class="img-hint">来源：谷歌搜索</small>
+
+而你要跟Python对话，主要会用到如下图的Python保留词
+![apps](/img/in-post/20200516-free-python-01/reserve-words.png)
+<small class="img-hint">Python3的30个保留词，来源：《Python for Everybody》一书</small>
+
+Python的词汇量，是不是比英语小了很多呢！自然，应该比英语更好学。
 
 ### 第一个Python程序
-【有待补充】
+下面，激动人心的时刻到了，我们要写第一条Python代码了。
+
+由于是第一个Python程序，很简单，我们没有必要用复杂的Atom进行语法检查什么的。所以，请直接打开你Mac电脑中的终端(Terminal)App，输入
+```
+$ python3
+```
+一般我用"$"来表示你打开终端App后看到的光标前面的一大串字，比如我的是`codingbro@Code's-MacBook:~/Documents/python-little-course/`。哎，太长了，还是用一个`$`表示来得省事。  
+总之，输入完`python3`摁回车键，你应该会看到类似如下的信息
+```
+Python 3.7.2 (default, Jan 13 2019, 12:50:01)
+[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+光标就停留在`>>>`符号的后面。
+
+这段信息基本告诉你，Python的解释器已经启动了，用的是Python 3.7.2版本（你的版本只要是3.x.x就能完成本课程，比我的版本高或低一点都无所谓）。你可以在**`>>>`符号的后面开始写你的Python代码了**。
+
+然后，请你打下如下字符，并按回车：
+```python
+print('你好,Python')
+```
+
+你看到了什么？首先，Python3是支持打印中文文字的。当然，关键是在你打完上述代码的下一行，Python解释器输出了“你好,Python”的字样。
+
+![apps](/img/in-post/20200516-free-python-01/ex1.png)
+<small class="img-hint">如果你的Python解释器返回给你如图所示结果，说明你做对了</small>
+
+好，恭喜你，你已经完成了你的第一个Python程序！！
+
+那，下一步干什么？比如，你可以试着把引号内的内容换成别的什么东西，看一看会得到什么结果。
+
+也许你会问，这门课就这么简单吗？
+
+别骄傲哦，这才是刚开始，我给你看看这门课学到第10课你会写出来的代码大概长什么样：
+```python
+file_name = input('Enter a text file name:')  # ie. '../files/mbox.txt'
+try:
+    file = open(file_name)
+except FileNotFoundError:
+    print(file_name, 'does not exist!')
+    exit()
+
+map = dict()
+for line in file:
+    line = line.rstrip()
+    if line.startswith('From '):
+        words = line.split()
+        time = words[5]
+        hour = time.split(':')[0]
+        map[hour] = map.get(hour, 0) + 1
+
+lst = list()
+
+for hour, freq in map.items():
+    lst.append((hour, freq))
+
+lst.sort()
+
+for item in lst:
+    print(item[0], item[1])
+```
+
+是不是看不懂了？不过没有关系，持之以恒，跟着笔记哥学习下来，不需多时你就会明白上面的代码了。
 
 ### 总结
-好，总结一下。这一章的内容主要就是解除编程的神秘感，带读者朋友们写出第一个Python程序，就完成啦！  
+好，总结一下。这一章的内容主要就是激发读者学习编程的兴趣，解除编程的神秘感，带读者朋友们写出第一个Python程序！  
 喜欢我内容的朋友可以在YouTube或微信公众号搜索**“代码笔记哥”**订阅我。
