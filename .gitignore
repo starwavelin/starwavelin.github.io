@@ -11,3 +11,7 @@ gfm-toc
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
+
+
+# specific posts
+_posts/2020-12-04-fin-news.md
