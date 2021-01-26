@@ -5,7 +5,6 @@ node_modules
 */.DS_Store
 */*/.DS_Store
 *.sh
-gfm-toc
 
 # from default jekyll template
 .sass-cache
@@ -14,4 +13,4 @@ gfm-toc
 
 
 # specific posts
-_posts/2020-12-04-fin-news.md
+_posts/2021-01-16-fin-news.md
