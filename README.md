@@ -6,7 +6,7 @@
     - [Acknowledgement](#acknowledgement)
 
 ### Features Added
-[details](https://starwavelin.io/2019/05/24/feature-adding-on-my-blog/)
+[details](http://starwavelin.io/2019/05/24/feature-adding-on-my-blog/)
 1. [x] Enabled Disqus Commenting
 2. [] @TODO Add site traffic statistics feature
 3. [] @TODO Add advertisement feature
@@ -19,7 +19,7 @@
 
 
 ### Bugs and Fixes
-[details](https://starwavelin.io/2018/05/24/bug-fixes-on-my-blog/)
+[details](http://starwavelin.io/2018/05/24/bug-fixes-on-my-blog/)
 
 ### Acknowledgement
 - Hux Blog's [Boilerplate Version](https://github.com/Huxpro/huxblog-boilerplate)

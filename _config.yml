@@ -6,20 +6,19 @@ email:
 description: "The Cabin of Starwavelin (Coding Bro)"
 keyword: "starwavelin, xian lin, 代码笔记哥, 代码笔记哥的博客, 技术博客, ben lin, benxlin, tech blog"
 url: "https://starwavelin.github.io"   # your host, for absolute URL
-baseurl: ""         # original: /huxblog-boilerplate, for example, '/blog' if your blog hosted on 'host/blog'
-
+baseurl: "" # original: /huxblog-boilerplate, for example, '/blog' if your blog hosted on 'host/blog'
 
 
 # SNS settings
 RSS: true
-facebook_username:
 github_username:    starwavelin
-instagram_username: codingbro
-linkedin_username:  xian-ben-lin-42712b28/
-#twitter_username:
-wechat_username:    Coding-Notes
-weibo_username:     6469155519
 youtube_username:   starwavelin/
+twitter_username:
+linkedin_username:
+facebook_username:
+instagram_username:
+wechat_username:
+weibo_username:
 zhihu_username:
 
 
@@ -32,11 +31,9 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-
 # Gems
 # to support local preview for Jekyll 3.0
 plugins: [jekyll-paginate]
-
 
 
 # Markdown settings
@@ -48,7 +45,6 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 
-
 # Disqus settings
 disqus_username: xlin12
 
@@ -56,8 +52,6 @@ disqus_username: xlin12
 #duoshuo_username:
 # Share component is depend on Comment so we can NOT use share only.
 #duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
-
 
 
 # Analytics settings
@@ -68,12 +62,10 @@ disqus_username: xlin12
 # ga_domain: starwavelin.com
 
 
-
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "平凡是唯一的答案"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
 
 
 # Featured Tags
@@ -81,15 +73,10 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
-
 # Friends
 friends: [
   {
     title: "Church Rides",
     href: "https://www.churchrides.com/"
-  },
-  {
-    title: "Oraant",
-    href: "http://blog.oraant.cc/introduction/"
   }
 ]
