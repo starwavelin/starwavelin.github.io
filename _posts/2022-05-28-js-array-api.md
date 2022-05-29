@@ -29,6 +29,22 @@ arr.push(n);
 arr.push(...arr2);
 ```
 
+3. 往数组中间插入一个元素
+```js
+arr.splice(insertIndex, 0, element);
+```
+举例：
+```js
+res.splice(insertPos, 0, newInterval);
+```
+在上面的parameters中，第二个parameter `0`是deleteCount。因为splice函数允许从insertIndex的位置开始，往后删除若干个元素，但由于我们这里不做任何删除，所以为`0`。  
+此外，splice允许从插入位置开始，插入多个元素，比如：  
+```js
+arr.splice(insertIndex, 0, ele1, ele2, ele_n);
+```
+```js
+arr.splice(insertIndex, 0, ...arr2);
+```
 
 ### 2. 基于基础array [] 的使用callback function的操作
 
