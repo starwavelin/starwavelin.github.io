@@ -13,7 +13,7 @@ tags:
 
 ### 1. 用数组的filter方法来“删除”特定元素
 与上一篇提到的`splice()`方法有所不同，`filter()`方法不会改变原数组，但是会根据filter函数里面的条件，来返回一个新的数组。举例如下：
-```JavaScript
+```js
 const arr = [1, 2, 3, 4, 5, 6];
 const filtered = arr.filter((value, index, arr) => {
     return value > 3; // 只有数组arr中大于3的元素，才符合filter的标准，会保留在新的filtered数组中;
@@ -25,7 +25,7 @@ console.log(filtered); // [4, 5, 6]
 
 ### 2. 利用第三方工具包，比如lodash
 虽然原生态的JavaScript并没有对数组的`remove()`方法，但是第三方库，比如`lodash`，是有的。使用lodash中的删除方法，关键要给出删除的条件；另外与上面的`filter()`方法不同的是，删除是对原数组的操作，所以删除后的结果会在原来的数组`arr`中体现。举例如下：
-```JavaScript
+```js
 const arr = [1, 2, 3, 4, 5, 6];
 const evenDeleted = _.remove(arr, n => { //下划线“_”即为引入的lodash库
     return n % 2 === 0;
@@ -36,7 +36,7 @@ console.log(arr); //  arr数组变为[1, 3, 5]，原数组所有的偶数元素�
 ### 3. 我们自己写一个remove方法
 假如我们不能使用lodash这样的包，我们可以怎么办？其实我们可以自己写一个从原数组arr中，根据特定条件进行remove的方法。这里面要用到上一篇提到过的`splice()`函数，以及callback函数（回调函数、回叫函数）概念。写法如下:
 
-```JavaScript
+```js
 function remove(arr, cb) { //arr即为原数组，cb是callback函数的签名(function signature)
     let i = arr.length;
     while (i--) {
@@ -55,7 +55,7 @@ function remove(arr, cb) { //arr即为原数组，cb是callback函数的签名(f
 下面再用两个例子来看看我们如何写这个回叫函数来实现我们要交给原数组的删除条件。  
 
 例子1：删除数组中的偶数元素。
-```JavaScript
+```js
 function removeInCondition(element) {
     return element % 2 === 0;
 }
@@ -64,7 +64,7 @@ console.log(remove([1, 2, 3, 4, 5, 6], removeInCondition)); //output: [1, 3, 5]
 ```
 
 例子2：删除数组中数值为6的所有元素。
-```JavaScript
+```js
 const dataToDel = 6;
 function removeInCondition(element) {
     return element === dataToDel;
@@ -78,7 +78,7 @@ console.log(remove([1, 6, 6, 4, 5, 6], removeInCondition)); //output: [1, 4, 5]
 ### 4. 利用delete operator
 JavaScript自带的`delete`运算符，也可以用于某种意义上的删除数组元素，之所以说是某种意义上，是因为它的删除原理和`splice()`是很不一样的，我们先看一个例子，再说明不一样在哪儿。
 
-```JavaScript
+```js
 const arr = [1, 2, 3, 4, 5];
 delete arr[3]; // delete element with index 3
 
@@ -98,7 +98,7 @@ console.log(arr);
 这个方法其实没什么太多说的，就是个抖机灵的方法。  
 如果，你的requirement是，删除原数组中的所有元素，那么，你直接把原数组的句柄指向一个空数组，就得了。举例:
 
-```JavaScript
+```js
 let arr = [1, 2, 3, 4, 5];
 arr = [];
 console.log(arr);

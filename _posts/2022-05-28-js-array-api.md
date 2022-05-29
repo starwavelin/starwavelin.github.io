@@ -1,0 +1,79 @@
+---
+layout:     post
+title:      "JavaScript刷题常用API之 Array"
+subtitle:   "Commonly used JavaScript API for LeetCode - Array related"
+date:       2022-05-28
+author:     "代码笔记哥"
+header-img:
+tags:
+    - 算法
+    - JS
+    - API
+    - Extensible Note
+---
+WIP:   
+
+### 前言
+本文提供笔记哥用JavaScript/TypeScript刷题时的常用的Array相关的的API。    
+方便阅读和快速理解，本文尽量提供这些API的中文注解。
+
+### 1. 基于基础array [] 的操作
+1. 往数组尾部增加元素
+```js
+arr.push(n);
+```
+
+2. 往数组尾部增加另一个数组的所有元素，但不是直接添加另一个数组，而是要另一个数组的元素都展开后加入
+```js
+// assume arr2 代表另一个数组
+arr.push(...arr2);
+```
+
+
+### 2. 基于基础array [] 的使用callback function的操作
+
+1. 利用reduce()函数做数组内的元素求和
+语法：
+```js
+return arr.reduce((pre, cur) => {
+    return pre + cur;
+}, initValue);
+```
+在遍历的过程中，`cur`是遍历到的当前元素，`pre`则为当前元素的前一个元素。所以在开始遍历数组的第一个元素时，`pre`的值即为`initValue`。  
+应用举例：  
+```js
+return arr.reduce((pre, cur) => {
+    return pre + cur;
+}, 0);
+```
+
+2. sort排序，sort()内的callback function决定了排序法则  
+**从小到大排序：**
+```js
+arr.sort((a, b) => a - b);
+```
+注意，有时在编译器中，若要对数组内的数值进行排序，这个callback函数是要明确写出来的，否则对一个正整数数组`arr`，`arr.sort()`得到的是原来的没有排序的结果。   
+**从大到小排序：**  
+只要把callback函数内的两个相减变量的顺序颠倒一下即可。
+```js
+arr.sort((a, b) => b - a);
+```
+
+
+### 3. 使用Array class的操作
+
+1. 初始化某个固定长度的数组，并将其中的每个元素赋予一个初始值
+语法：
+```js
+Array(len).fill(num);
+```
+举例：
+```js
+const arr = Array(ratings.length).fill(1);
+```
+规定`arr`是个长度与`ratings`的长度相同的数组，且数组内的每个值都初始化为1。
+
+
+### 总结
+
+您还有什么要补充的JavaScript/TypeScript刷题常用的Array类API吗？如果YES，请留言，不吝赐教。
