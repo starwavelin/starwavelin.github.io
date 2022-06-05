@@ -54,17 +54,17 @@ Speed matters in business. Many decisions and actions are reversible and do not 
 
 在商务活动中，效率就是生命。很多决策和行动是可以回滚的所以我们不必拘泥于过多的事先调研。我们欢迎勇于承担一定预期风险的领导者。
 
-### 9. Earn Trust
+### 9. Earn Trust / 赢得信任
 Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing. Leaders do not believe their or their team’s body odor smells of perfume. They benchmark themselves and their teams against the best.
 
 领导者听得仔细，说得真诚，并对他人报以尊重。他们会做自我批评，尽管有时这种自我批评会让他们显得难堪。领导者不相信他们团队成员的彩虹屁。他们是以最佳表现来衡量自身和自己的团队。
 
-### 10. Dive Deep
+### 10. Dive Deep / 深入浅出
 Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
 
 领导者从各个不同层面进行运作，虽然如上面一个要点所述，他们从宏观思考和管理，但他们仍保持与细节连接，并时常审核团队的运作情况。在实际情况和度量指标不相符的时候，他们保持怀疑。没有任何任务可以隐藏在他们的视线下。
 
-### 11. Deliver Results
+### 11. Deliver Results / 交付结果
 Leaders focus on the key inputs for their business and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle.
 
 领导者吸收商务活动中的关键信息点并按时交付高质量的产品。尽管时有挫折，他们绝不言弃。

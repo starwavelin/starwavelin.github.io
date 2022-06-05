@@ -8,14 +8,15 @@
 ### Features Added
 [details](http://starwavelin.io/2019/05/24/feature-adding-on-my-blog/)
 1. [x] Enabled Disqus Commenting
-2. [] @TODO Add site traffic statistics feature
-3. [] @TODO Add advertisement feature
-4. [] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
-5. [] @TODO Implement a search bar on top navigation container
-6. [] @TODO Allow blog viewers to toggle between the available languages of an article
-7. [] @TODO Implement a reward button for articles
-8. [x] Provide an XML for RSS readers
-9. [] @TODO Provide Google Analytics for the site
+2. [x] Provide an XML for RSS readers
+3. [ ] @TODO Add SSL (from http to https) - [reference](https://www.yicodes.com/2016/12/04/free-cloudflare-ssl-for-custom-domain/)
+4. [ ] @TODO Add site traffic statistics feature
+5. [ ] @TODO Add advertisement feature
+6. [ ] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
+7. [ ] @TODO Implement a search bar on top navigation container
+8. [ ] @TODO Allow blog viewers to toggle between the available languages of an article
+9. [ ] @TODO Implement a reward button for articles
+10. [ ] @TODO Provide Google Analytics for the site
 
 
 ### Bugs and Fixes
