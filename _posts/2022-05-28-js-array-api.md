@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "JavaScript刷题常用API之 Array"
-subtitle:   "Commonly used JavaScript API for LeetCode - Array related"
+title:      "TS刷题常用API: Array"
+subtitle:   "Commonly used TypeScript/JavaScript API for LeetCode - Array related"
 date:       2022-05-28
 author:     "代码笔记哥"
 header-img:
@@ -44,6 +44,16 @@ arr.splice(insertIndex, 0, ele1, ele2, ele_n);
 ```
 ```js
 arr.splice(insertIndex, 0, ...arr2);
+```
+
+4. 从数组头部删除并返回元素
+```js
+arr.shift(n);
+```
+
+5. 从数组尾部删除并返回元素
+```js
+arr.pop(n);  //这和 Stack相关的函数名称pop()刚好相同 
 ```
 
 ### 2. 基于基础array [] 的使用callback function的操作
