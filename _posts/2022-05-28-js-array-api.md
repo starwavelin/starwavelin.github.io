@@ -56,6 +56,14 @@ arr.shift(n);
 arr.pop(n);  //这和 Stack相关的函数名称pop()刚好相同 
 ```
 
+6. 有shift就有unshift， 从数组头部增加元素，相当于prepend
+```js
+arr.unshift(num);
+```
+从这里可以看出，JavaScript中的数组更像是一个双端队列deque，因为它的头尾都可以加减元素。
+
+
+
 ### 2. 基于基础array [] 的使用callback function的操作
 
 1. 利用reduce()函数做数组内的元素求和
