@@ -62,7 +62,11 @@ arr.unshift(num);
 ```
 从这里可以看出，JavaScript中的数组更像是一个双端队列deque，因为它的头尾都可以加减元素。
 
-
+7. 有时候要从array中查找某一个元素所对应的索引
+```js
+arr.indexOf(num);
+```
+假如找到了返回`num`的索引，假如没找到返回`-1`。
 
 ### 2. 基于基础array [] 的使用callback function的操作
 
