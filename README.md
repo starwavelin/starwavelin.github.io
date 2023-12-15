@@ -1,9 +1,16 @@
 # Coding Bro - starwavelin's tech blog
 
 - [Coding Bro - starwavelin's tech blog](#coding-bro---starwavelins-tech-blog)
+  - [How to Run](#how-to-run)
   - [Features Added](#features-added)
   - [Bugs and Fixes](#bugs-and-fixes)
   - [Acknowledgement](#acknowledgement)
+
+### How to Run
+
+1. Open the terminal and go to the directory of this project.
+2. Issue the command `jekyll server` and ensure the console has no errors.
+3. Open your browser and goto `http://localhost:4000/`. That's it!
 
 ### Features Added
 
