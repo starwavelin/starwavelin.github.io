@@ -2,7 +2,7 @@
     "name": "coding-bro",
     "title": "Coding Bro",
     "version": "1.0.0",
-    "homepage": "http://starwavelin.github.io",
+    "homepage": "https://starwavelin.github.io",
     "author": "starwavelin",
     "devDependencies": {
         "grunt": "1.5.3",
