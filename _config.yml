@@ -1,18 +1,17 @@
 # Site settings
-title: Coding Bro
-SEOTitle: 代码笔记哥 | Coding Bro
+title: Codingbro's Blog
+SEOTitle: 代码笔记哥 | Codingbro
 header-img: img/home-bg.jpg
 email:
-description: "The Cabin of Starwavelin (Coding Bro)"
-keyword: "starwavelin, xian lin, 代码笔记哥, 代码笔记哥的博客, 技术博客, ben lin, benxlin, tech blog"
-url: "https://starwavelin.github.io"   # your host, for absolute URL
+description: "The Blog of Codingbro Lin"
+keyword: "codingbro, codingbro lin, codingbro's blog, tech blog, xian lin, 代码笔记哥, 代码笔记哥的博客, 技术博客"
+url: "https://starwavelin.io" # your host, for absolute URL
 baseurl: "" # original: /huxblog-boilerplate, for example, '/blog' if your blog hosted on 'host/blog'
-
 
 # SNS settings
 RSS: true
-github_username:    starwavelin
-youtube_username:   starwavelin/
+github_username: starwavelin
+youtube_username: starwavelin
 twitter_username:
 linkedin_username:
 facebook_username:
@@ -21,20 +20,17 @@ wechat_username:
 weibo_username:
 zhihu_username:
 
-
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
 paginate: 7
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Gems
 # to support local preview for Jekyll 3.0
 plugins: [jekyll-paginate]
-
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -42,8 +38,7 @@ plugins: [jekyll-paginate]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
+  input: GFM # use Github Flavored Markdown !important
 
 # Disqus settings
 disqus_username: xlin12
@@ -53,7 +48,6 @@ disqus_username: xlin12
 # Share component is depend on Comment so we can NOT use share only.
 #duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
-
 # Analytics settings
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
@@ -61,22 +55,14 @@ disqus_username: xlin12
 # ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 # ga_domain: starwavelin.com
 
-
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
+sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "平凡是唯一的答案"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
+sidebar-avatar: /img/avatar.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
 # Friends
-friends: [
-  {
-    title: "Church Rides",
-    href: "https://www.churchrides.com/"
-  }
-]
+friends: [{ title: "", href: "" }]
