@@ -7,8 +7,8 @@ header-img: "img/about-bg.jpg"
 
 <!-- Language Selector -->
 <select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英语 English </option>
+    <option value="0" selected> English 英语 </option>
+    <option value="1"> 中文 Chinese </option>
 </select>
 
 <!-- Chinese Version -->
@@ -79,13 +79,14 @@ header-img: "img/about-bg.jpg"
 <script type="text/javascript">
     var $zh = document.querySelector(".zh");
     var $en = document.querySelector(".en");
-    function onLanChange(index){
-        if(index == 0){
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
+    function onLanChange(index) {
+        if (index == 0) {
+            /* 0 - English */
             $en.style.display = "block";
             $zh.style.display = "none";
+        } else {
+            $zh.style.display = "block";
+            $en.style.display = "none";
         }
     }
     onLanChange(0);

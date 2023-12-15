@@ -1,6 +1,6 @@
-# Coding Bro - starwavelin's tech blog
+# Codingbro - starwavelin's tech blog
 
-- [Coding Bro - starwavelin's tech blog](#coding-bro---starwavelins-tech-blog)
+- [Codingbro - starwavelin's tech blog](#codingbro---starwavelins-tech-blog)
   - [How to Run](#how-to-run)
   - [Features Added](#features-added)
   - [Bugs and Fixes](#bugs-and-fixes)
@@ -18,7 +18,7 @@
 
 1. [x] Enabled Disqus Commenting
 2. [x] Provide an XML for RSS readers
-3. [x] @TODO Add SSL (from http to https) - [reference](https://drive.google.com/file/d/1ZWd_OfPGyd6clu70eX5mR_PJZt-_NSEj/view)
+3. [x] Added SSL (from http to https) - [A How-to Reference](https://drive.google.com/file/d/1ZWd_OfPGyd6clu70eX5mR_PJZt-_NSEj/view)
 4. [ ] @TODO Add site traffic statistics feature
 5. [ ] @TODO Add advertisement feature
 6. [ ] @TODO Add a projects page (maybe similar to [Mengdi Wang's](https://www.iammengdiwang.com/project.html))
@@ -29,7 +29,7 @@
 
 ### Bugs and Fixes
 
-[details](http://starwavelin.io/2018/05/24/bug-fixes-on-my-blog/)
+- [Details](https://starwavelin.io/2018/05/24/bug-fixes-on-my-blog/)
 
 ### Acknowledgement
 
