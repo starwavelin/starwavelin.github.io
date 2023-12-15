@@ -1,31 +1,37 @@
 ---
-layout:     post
-title:      "How to Use Huxpro Template to Write Articles"
-subtitle:   "用Huxpro模板写文章"
-date:       2018-05-22
-author:     "starwavelin"
+layout: post
+title: "How to Use Huxpro Template to Write Articles"
+subtitle: "用Huxpro模板写文章"
+date: 2018-05-22
+author: "starwavelin"
 header-img: "img/post-banner/post-bg-mosaic.jpg"
 tags:
-    - 其他技术
+  - Blog
 ---
+
 ### Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [Preface](#preface)
 - [Writing a journal](#writing-a-journal)
 - [Adding a table of contents](#adding-a-table-of-contents)
-- [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)   
+- [Apply your own domain to your tech blog](#apply-your-own-domain-to-your-tech-blog)
 
 ### Preface
+
 Firstly I would like to sincerely thank Mr. Xuan Huang (黄玄 | [Huxpro](https://github.com/Huxpro)) for providing this convenient Jekyll template.
 He actually supplies two templates for the general public to use:
+
 1. [boilerplate version](https://github.com/Huxpro/huxblog-boilerplate)
 2. [his personal advanced version](https://github.com/Huxpro/huxpro.github.io)
 
-What I am using for myself (Coding Bro 📒代码笔记哥）is the boilerplate version.
+What I am using for myself (Coding Bro 📒 代码笔记哥）is the boilerplate version.
 
 ### Writing a journal
-To write a journal for your blog, create a markdown file in ``_posts/`` directory with format "yyyy-mm-dd-{your-journal-title}.md", in which you can replace {your-journal-title} with any article name you want.  
 
-Then, within the ``.md`` file, the header should be coded in a somehow fixed format. Here I'd like to show you two screenshots and I guess after viewing them, you will know how to code your article.
+To write a journal for your blog, create a markdown file in `_posts/` directory with format "yyyy-mm-dd-{your-journal-title}.md", in which you can replace {your-journal-title} with any article name you want.
+
+Then, within the `.md` file, the header should be coded in a somehow fixed format. Here I'd like to show you two screenshots and I guess after viewing them, you will know how to code your article.
 
 ![header-code](/img/in-post/180522-use-huxpro-template/header-code.png)
 <small class="img-hint">in this 10-line header code of a markdown file, just make sure the layout should be "post", other fields can be customized or omitted</small>
@@ -35,8 +41,8 @@ Then, within the ``.md`` file, the header should be coded in a somehow fixed for
 And, Huxpro template also provides an automatically generated summary of an article you post.
 ![summary-on-index](/img/in-post/180522-use-huxpro-template/summary-on-index.png)
 
-
 ### Adding a table of contents
+
 You can also add a table of content to your journal if you think necessary. To do so, you need a tool called [gfm-toc](https://github.com/starwavelin/AlgorithmPractice/blob/master/gfm-toc)  
 And I already wrote an instruction on [how to use gfm-toc](https://github.com/starwavelin/AlgorithmPractice/blob/master/gfm-toc-usage.md)
 
@@ -51,17 +57,18 @@ Once I removed the redundant indentations to make the code as below
 The problem resolved.
 
 ### Apply your own domain to your tech blog
+
 This step is optional and is not related to how to write an article. But isn't that cool if you can set your own domain pointing to your own YOUR_USERNAME.github.io formatted tech blog?
 
-Step 1: Purchase your domain (ie. I purchased starwavelin.com from [godaddy](https://www.godaddy.com/))  
+Step 1: Purchase your domain (ie. I purchased starwavelin.com from [godaddy](https://www.godaddy.com/))
 
-Step 2: On your godaddy account's DNS Management page, create ``A`` records that point your custom domain to the following IP addresses:
+Step 2: On your godaddy account's DNS Management page, create `A` records that point your custom domain to the following IP addresses:
 
 > 185.199.108.153  
 > 185.199.109.153  
 > 185.199.110.153  
-> 185.199.111.153  
+> 185.199.111.153
 
 Step 3: In your GITHUB_USERNAME.github.io/ project directory, add a file named "CNAME", and inside CNAME, just put one line -- your domain name (ie. for me I put "starwavelin.com")
 
-Step 4: You can then update the url value of **_config.yml** from ```url: "https://GITHUB_USERNAME.github.io"``` into ```url: "https://YOUR_DOMAINNAME"```
+Step 4: You can then update the url value of **\_config.yml** from `url: "https://GITHUB_USERNAME.github.io"` into `url: "https://YOUR_DOMAINNAME"`
