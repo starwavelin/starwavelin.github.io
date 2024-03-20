@@ -4,8 +4,8 @@ SEOTitle: 代码笔记哥 | Codingbro
 header-img: img/home-bg.jpg
 email:
 description: "The Blog of Codingbro Lin"
-keyword: "codingbro, codingbro lin, codingbro's blog, tech blog, xian lin, 代码笔记哥, 代码笔记哥的博客, 技术博客"
-url: "https://starwavelin.io" # your host, for absolute URL
+keyword: "codingbro, codingbro lin, codingbro's blog, tech blog, 代码笔记哥, 代码笔记哥的博客, 技术博客"
+url: "https://codingbrolin.uk" # your host, for absolute URL
 baseurl: "" # original: /huxblog-boilerplate, for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
@@ -48,7 +48,7 @@ disqus_username: xlin12
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 # ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-# ga_domain: starwavelin.io
+# ga_domain: codingbrolin.uk
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.

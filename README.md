@@ -14,7 +14,7 @@
 
 ### Features Added
 
-[details](http://starwavelin.io/2019/05/24/feature-adding-on-my-blog/)
+[details](http://codingbrolin.uk/2019/05/24/feature-adding-on-my-blog/)
 
 1. [x] Enabled Disqus Commenting
 2. [x] Provide an XML for RSS readers
@@ -29,7 +29,7 @@
 
 ### Bugs and Fixes
 
-- [Details](https://starwavelin.io/2018/05/24/bug-fixes-on-my-blog/)
+- [Details](https://codingbrolin.uk/2018/05/24/bug-fixes-on-my-blog/)
 
 ### Acknowledgement
 
