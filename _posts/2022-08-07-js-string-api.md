@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "TS刷题常用API: String"
-subtitle: "Commonly used TypeScript/JavaScript API for LeetCode - String related"
+title: "Commonly used TypeScript/JavaScript API for LeetCode - String"
+subtitle: "TS刷题常用API: String"
 date: 2022-08-07
-author: "代码笔记哥"
+author: "Codingbro"
 header-img:
 tags:
   - 算法
@@ -16,9 +16,27 @@ WIP:
 
 <!-- Language Selector -->
 <select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> English 英语 </option>
-    <option value="1"> 中文 Chinese </option>
+    <option value="0" selected>English 英语</option>
+    <option value="1">Chinese 中文</option>
 </select>
+
+<!-- English Version -->
+<div class="en post-container">
+    <h3>Preface</h3>
+    <p>This article provides the common JavaScript/TypeScript API for String when you are LeetCoding.</p>
+
+    <h3> 1. Operations on a string</h3>
+    <ol>
+        <li>Obtain a substring from the given string</li>
+    </ol>
+    <pre>
+        <code>str.substring(i, j); // Obtain a substring whose starting index is i and ending index is j-1</code>
+    </pre>
+
+    <h3>Summary</h3>
+    <p>Please share more JavaScript/TypeScript common API for String during LeetCoding in the comment section below. Thak you.</p>
+
+</div>
 
 <!-- Chinese Version -->
 <div class="zh post-container">
@@ -36,24 +54,6 @@ WIP:
 
     <h3>总结</h3>
     <p>您还有什么要补充的 JavaScript/TypeScript 刷题常用的 String 类 API 吗？如果 YES，请留言，不吝赐教。</p>
-
-</div>
-
-<!-- English Version -->
-<div class="en post-container">
-    <h3>Preface</h3>
-    <p>This article provides the common JavaScript/TypeScript API for String when you are LeetCoding.</p>
-
-    <h3> 1. Operations on a string</h3>
-    <ol>
-        <li>Obtain a substring from the given string</li>
-    </ol>
-    <pre>
-        <code>str.substring(i, j); // Obtain a substring whose starting index is i and ending index is j-1</code>
-    </pre>
-
-    <h3>Summary</h3>
-    <p>Please share more JavaScript/TypeScript common API for String during LeetCoding in the comment section below. Thak you.</p>
 
 </div>
 
